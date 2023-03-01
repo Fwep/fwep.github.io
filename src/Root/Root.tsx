@@ -1,4 +1,4 @@
-import React, { ReactElement } from "react";
+import { ReactElement } from "react";
 import { Outlet, Link } from "react-router-dom";
 import Typist from "react-typist";
 
