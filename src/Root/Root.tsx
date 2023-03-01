@@ -1,4 +1,5 @@
 import React, { ReactElement } from "react";
+import { Outlet, Link } from "react-router-dom";
 import Typist from "react-typist";
 
 export function Root(): ReactElement {
@@ -12,11 +13,12 @@ export function Root(): ReactElement {
           element: "█",
         }}
       >
-        taran cacacho
+        ~/taran_cacacho
       </Typist>
       <hr className="solid" />
-      <button>📸</button>
-      <button>👨🏾‍💻</button>
+      <Link to={`photos`}>📸</Link>
+      <Link to={`work`}>👨🏾‍💻</Link>
+      <Outlet />
     </div>
   );
 }
