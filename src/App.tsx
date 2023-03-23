@@ -1,5 +1,6 @@
 import "./App.css";
 import { Root } from "./Root";
+import { PhotoPanel } from "./PhotoPanel";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -10,7 +11,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "photos",
-        element: <div>Photos</div>,
+        element: <PhotoPanel />,
       },
       {
         path: "work",
