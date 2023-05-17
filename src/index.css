@@ -4,6 +4,8 @@ html {
 }
 
 body {
+  background-color: rgb(32, 33, 36);
+  color: rgb(255, 255, 255);
   height: 100%;
   margin: 0;
   width: 100%;
@@ -16,4 +18,41 @@ body {
 
 #root > div {
   min-height: 100%;
+}
+
+.company-logo {
+  background-color: rgb(32, 33, 36);
+  border-radius: 10px;
+  height: 50px;
+  object-fit: contain;
+  width: 50px;
+}
+
+.job-description {
+  background-color: rgb(48, 49, 52);
+  border-radius: 5px;
+  margin: 5px;
+  padding: 1em 1em 1em;
+  width: 80%;
+}
+
+.job-entry {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.work-panel {
+  position: relative;
+  z-index: 0;
+}
+
+.work-panel::before {
+  border: 1px rgb(27, 255, 128) solid;
+  content: "";
+  height: 100%;
+  left: 145px;
+  padding: 0;
+  position: absolute;
+  z-index: -1;
 }
