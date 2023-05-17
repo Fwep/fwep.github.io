@@ -1,6 +1,7 @@
 import "./App.css";
 import { Root } from "./Root";
 import { PhotoPanel } from "./PhotoPanel";
+import { WorkPanel } from "./WorkPanel";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -15,7 +16,7 @@ const router = createBrowserRouter([
       },
       {
         path: "work",
-        element: <div>Work</div>,
+        element: <WorkPanel />,
       },
     ],
   },
