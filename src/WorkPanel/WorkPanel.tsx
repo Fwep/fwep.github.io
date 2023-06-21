@@ -1,17 +1,18 @@
 import { ReactElement } from "react";
 import { JobEntry } from "../JobEntry";
 import Typist from "react-typist";
+import { Image } from "@geist-ui/core";
 
 export function WorkPanel(): ReactElement {
   return (
     <div className="work-panel">
       <JobEntry>
-        <img
+        <Image
           alt="Meta logo"
           className="company-logo"
-          height={30}
+          height="30px"
           src={"/assets/images/meta_logo.png"}
-          width={50}
+          width="50px"
         />
         <div className="typist-container">
           <Typist avgTypingDelay={0} className="typist-job-description">
@@ -26,34 +27,44 @@ export function WorkPanel(): ReactElement {
         </div>
       </JobEntry>
       <JobEntry>
-        <img
+        <Image
           alt="Bruin Racing logo"
           className="company-logo"
-          height={200}
+          height="30px"
           src={"/assets/images/bruin_racing_logo.png"}
-          width={200}
+          width="50px"
         />
-        <p className="job-description">
-          As part of the Formula SAE racing org, I was in charge of the design
-          of our race car's cooling system. I used MATLAB and Simulink to model
-          the performance of various configurations, and sourced and
-          manufactured the mounting fixtures.
-        </p>
+        <div className="typist-container">
+          <Typist avgTypingDelay={0} className="typist-job-description">
+            <p>less meta.txt</p>
+          </Typist>
+          <p className="raw-job-text">
+            As part of the Formula SAE racing org, I was in charge of the design
+            of our race car's cooling system. I used MATLAB and Simulink to
+            model the performance of various configurations, and sourced and
+            manufactured the mounting fixtures.
+          </p>
+        </div>
       </JobEntry>
       <JobEntry>
-        <img
+        <Image
           alt="UCLA logo"
           className="company-logo"
-          height={40}
+          height="30px"
           src={"/assets/images/ucla_logo.png"}
-          width={50}
+          width="50px"
         />
-        <p className="job-description">
-          As part of the Formula SAE racing org, I was in charge of the design
-          of our race car's cooling system. I used MATLAB and Simulink to model
-          the performance of various configurations, and sourced and
-          manufactured the mounting fixtures.
-        </p>
+        <div className="typist-container">
+          <Typist avgTypingDelay={0} className="typist-job-description">
+            <p>less meta.txt</p>
+          </Typist>
+          <p className="raw-job-text">
+            As part of the Formula SAE racing org, I was in charge of the design
+            of our race car's cooling system. I used MATLAB and Simulink to
+            model the performance of various configurations, and sourced and
+            manufactured the mounting fixtures.
+          </p>
+        </div>
       </JobEntry>
     </div>
   );

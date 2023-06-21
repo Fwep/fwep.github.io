@@ -1,3 +1,4 @@
+import { Card } from "@geist-ui/core";
 import { ReactElement, PropsWithChildren } from "react";
 
 type Props = {};
@@ -5,7 +6,9 @@ type Props = {};
 export function JobEntry(props: PropsWithChildren<Props>): ReactElement {
   return (
     <>
-      <div className="job-entry">{props?.children}</div>
+      <Card hoverable type="secondary" className="job-entry">
+        {props?.children}
+      </Card>
     </>
   );
 }

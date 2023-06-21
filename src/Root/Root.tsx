@@ -1,6 +1,7 @@
 import { ReactElement } from "react";
 import { Outlet, Link } from "react-router-dom";
 import Typist from "react-typist";
+import { Tree } from "@geist-ui/core";
 
 export function Root(): ReactElement {
   return (
@@ -10,14 +11,23 @@ export function Root(): ReactElement {
         className="typist"
         cursor={{
           blink: true,
-          element: "█",
+          element: "|",
         }}
       >
         ~/taran_cacacho
       </Typist>
-      <hr className="solid" />
-      <Link to={`photos`}>📸</Link>
-      <Link to={`work`}>👨🏾‍💻</Link>
+      <Tree>
+        <Link to={`photos`}>
+          <Tree.Folder name="photos" className="tree" />
+        </Link>
+        <Link to={`work`}>
+          <Tree.Folder name="work" className="tree">
+            <Tree.File name="meta.txt" />
+            <Tree.File name="bruin_racing.txt" />
+            <Tree.File name="ucla.txt" />
+          </Tree.Folder>
+        </Link>
+      </Tree>
       <Outlet />
     </div>
   );

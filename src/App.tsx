@@ -1,4 +1,3 @@
-import "./App.css";
 import { Root } from "./Root";
 import { PhotoPanel } from "./PhotoPanel";
 import { WorkPanel } from "./WorkPanel";
