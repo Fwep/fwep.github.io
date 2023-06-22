@@ -33,12 +33,66 @@ body {
   overflow: auto;
 }
 
+p {
+  margin-top: 0;
+}
+
 ::-webkit-scrollbar {
   width: 0;
 }
 
-p.raw-job-text {
-  animation: blink 1s steps(2, jump-none);
+p.raw-job-text:nth-of-type(n) {
+  opacity: 0;
+}
+
+.company-logo {
+  margin-left: 5px !important;
+}
+
+#job-text-1 {
+  animation: blink 0.5s step-end 1s forwards;
+}
+
+#job-text-2 {
+  animation: blink 0.5s step-end 2s forwards;
+}
+
+#job-text-3 {
+  animation: blink 0.5s step-end 3s forwards;
+}
+
+#logo-1 {
+  animation: blink 1.5s step-end 0s forwards;
+}
+
+#logo-2 {
+  animation: blink 2.5s step-end 0s forwards;
+}
+
+#logo-3 {
+  animation: blink 3.5s step-end 0s forwards;
+}
+
+.job-entry {
+  align-items: center;
+  flex-basis: 200px;
+  min-height: 200px;
+  justify-content: center;
+  display: flex;
+  margin: 0 15% 10px 15% !important;
+  opacity: 0;
+}
+
+#entry-1 {
+  animation: blink 0.5s step-end 0s forwards;
+}
+
+#entry-2 {
+  animation: blink 0.5s step-end 1s forwards;
+}
+
+#entry-3 {
+  animation: blink 0.5s step-end 2s forwards;
 }
 
 @keyframes blink {
@@ -50,33 +104,8 @@ p.raw-job-text {
   }
 }
 
-.company-logo {
-  margin-left: 5px !important;
-}
-
 .company-logo:hover {
   background-color: rgb(78, 79, 82);
-}
-
-.job-entry {
-  align-items: center;
-  flex-basis: 200px;
-  justify-content: center;
-  display: flex;
-  margin: 0 15% 10px 15% !important;
-}
-
-.job-entry:nth-of-type(n) {
-  animation: top-to-bottom 1s ease forwards;
-}
-
-.job-entry:not(:first-of-type, :last-of-type)::before {
-  border: 1px rgb(145, 28, 39) solid;
-  content: "";
-  height: 50%;
-  left: 50%;
-  position: absolute;
-  z-index: -1;
 }
 
 .job-entry:first-of-type::before {
@@ -85,16 +114,6 @@ p.raw-job-text {
 
 .job-entry:last-of-type::before {
   margin-bottom: calc(40px);
-}
-
-/* .job-description, */
-/*.typist-job-description */
-.foo {
-  background-color: rgb(48, 49, 52);
-  border-radius: 5px;
-  margin: 5px;
-  padding: 1em 1em 1em;
-  width: 80%;
 }
 
 .work-panel {
@@ -123,11 +142,6 @@ p.raw-job-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-.typist {
-  /* position: absolute; */
-  /* margin-left: 45%; */
 }
 
 .header {
