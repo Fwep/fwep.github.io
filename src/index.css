@@ -104,6 +104,16 @@ p.raw-job-text:nth-of-type(n) {
   }
 }
 
+.contact-modal {
+  background-color: rgb(171, 171, 171) !important;
+  color: white !important;
+}
+
+.contact-link {
+  position: relative;
+  left: 50%;
+}
+
 .company-logo:hover {
   background-color: rgb(78, 79, 82);
 }
@@ -114,6 +124,11 @@ p.raw-job-text:nth-of-type(n) {
 
 .job-entry:last-of-type::before {
   margin-bottom: calc(40px);
+}
+
+.contact {
+  opacity: 0;
+  animation: blink 0.7s step-end 0s forwards;
 }
 
 .work-panel {
@@ -141,6 +156,12 @@ p.raw-job-text:nth-of-type(n) {
   align-items: center;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+}
+
+.nav-links {
+  display: flex;
+  width: 90%;
   justify-content: center;
 }
 

@@ -1,4 +1,4 @@
-import { Button, Spacer } from "@geist-ui/core";
+import { Button, Grid, Spacer } from "@geist-ui/core";
 import { ReactElement, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import TypeIt from "typeit-react";
@@ -31,7 +31,7 @@ export function Nav(): ReactElement {
         )}
       </div>
       <Spacer h={0.5} />
-      <div>
+      <div className="nav-links">
         <Link
           to={`photos`}
           onClick={() => {
