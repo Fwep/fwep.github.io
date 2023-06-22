@@ -1,6 +1,7 @@
 .Typist .Cursor {
   display: inline-block;
 }
+
 .Typist .Cursor--blinking {
   opacity: 1;
   animation: blink 0.9s step-end infinite;
@@ -29,10 +30,11 @@ body {
   height: 100%;
   margin: 0;
   width: 100%;
+  overflow: auto;
 }
 
-p {
-  margin: 0;
+::-webkit-scrollbar {
+  width: 0;
 }
 
 p.raw-job-text {
@@ -105,8 +107,33 @@ p.raw-job-text {
 
 .tree * {
   color: white !important;
+  text-decoration: none;
 }
 
 .tree .names .status {
   background-color: black;
+}
+
+.terminal-input {
+  display: flex;
+}
+
+.nav {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.typist {
+  /* position: absolute; */
+  /* margin-left: 45%; */
+}
+
+.header {
+  max-height: 10%;
+}
+
+div.text {
+  font-size: 2rem;
 }

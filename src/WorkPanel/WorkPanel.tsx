@@ -15,7 +15,11 @@ export function WorkPanel(): ReactElement {
           width="50px"
         />
         <div className="typist-container">
-          <Typist avgTypingDelay={0} className="typist-job-description">
+          <Typist
+            avgTypingDelay={0}
+            className="typist-job-description"
+            startDelay={1000}
+          >
             <p>less meta.txt</p>
           </Typist>
           <p className="raw-job-text">
@@ -35,7 +39,11 @@ export function WorkPanel(): ReactElement {
           width="50px"
         />
         <div className="typist-container">
-          <Typist avgTypingDelay={0} className="typist-job-description">
+          <Typist
+            avgTypingDelay={0}
+            className="typist-job-description"
+            startDelay={2000}
+          >
             <p>less meta.txt</p>
           </Typist>
           <p className="raw-job-text">
@@ -55,7 +63,11 @@ export function WorkPanel(): ReactElement {
           width="50px"
         />
         <div className="typist-container">
-          <Typist avgTypingDelay={0} className="typist-job-description">
+          <Typist
+            avgTypingDelay={0}
+            className="typist-job-description"
+            startDelay={3000}
+          >
             <p>less meta.txt</p>
           </Typist>
           <p className="raw-job-text">
