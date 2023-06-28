@@ -47,6 +47,7 @@ p.raw-job-text:nth-of-type(n) {
 
 .company-logo {
   margin-left: 5px !important;
+  overflow: inherit !important;
 }
 
 #job-text-1 {
@@ -73,14 +74,51 @@ p.raw-job-text:nth-of-type(n) {
   animation: blink 3.5s step-end 0s forwards;
 }
 
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main {
+  width: 100%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.work-panel {
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  display: flex;
+  width: 100%;
+}
+
 .job-entry {
   align-items: center;
+  background-color: #666;
   flex-basis: 200px;
   min-height: 200px;
-  justify-content: center;
+  justify-content: space-between;
   display: flex;
-  margin: 0 15% 10px 15% !important;
+  min-width: 280px;
+  padding-bottom: 5rem;
   opacity: 0;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+@media (max-width: 350px) {
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 620px) {
+  .job-entry {
+    font-size: 0.75rem;
+    max-width: calc(100vw - 20%);
+  }
 }
 
 #entry-1 {
@@ -109,11 +147,6 @@ p.raw-job-text:nth-of-type(n) {
   color: white !important;
 }
 
-.contact-link {
-  position: relative;
-  left: 50%;
-}
-
 .company-logo:hover {
   background-color: rgb(78, 79, 82);
 }
@@ -129,14 +162,6 @@ p.raw-job-text:nth-of-type(n) {
 .contact {
   opacity: 0;
   animation: blink 0.7s step-end 0s forwards;
-}
-
-.work-panel {
-  flex-direction: column;
-  flex-grow: 1;
-  display: flex;
-  justify-content: space-around;
-  height: 100%;
 }
 
 .tree * {
@@ -159,10 +184,19 @@ p.raw-job-text:nth-of-type(n) {
   justify-content: center;
 }
 
+.footer {
+  display: flex;
+  justify-content: center;
+}
+
 .nav-links {
   display: flex;
-  width: 90%;
   justify-content: center;
+  max-width: 100vw;
+}
+
+.nav-button {
+  background-color: #666 !important;
 }
 
 .header {

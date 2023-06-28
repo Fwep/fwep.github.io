@@ -8,8 +8,6 @@ export function Nav(): ReactElement {
   const { pathname } = useLocation();
   const [isTypingRoot, setIsTypingRoot] = useState(true);
   const [subDir, setSubDir] = useState(pathname);
-  console.log(subDir);
-  console.log(subDir === "/");
 
   return (
     <div className="nav">
@@ -40,7 +38,7 @@ export function Nav(): ReactElement {
           }}
           title="Go to photos"
         >
-          <Button type="secondary" className="emoji">
+          <Button className="nav-button" type="secondary">
             {subDir === "/photos" ? "📸" : "📷"}
           </Button>
         </Link>
@@ -52,7 +50,7 @@ export function Nav(): ReactElement {
           }}
           title="Go to work"
         >
-          <Button type="secondary" className="emoji">
+          <Button type="secondary" className="nav-button">
             👨🏾‍💻
           </Button>
         </Link>

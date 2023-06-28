@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
 import { JobEntry } from "../JobEntry";
 import Typist from "react-typist";
-import { Image } from "@geist-ui/core";
+import { Image, Spacer, Text } from "@geist-ui/core";
 
 export function WorkPanel(): ReactElement {
   return (
@@ -23,14 +23,15 @@ export function WorkPanel(): ReactElement {
           >
             <p>less meta.txt</p>
           </Typist>
-          <p className="raw-job-text" id="job-text-1">
+          <Text className="raw-job-text" id="job-text-1">
             As part of the Formula SAE racing org, I was in charge of the design
             of our race car's cooling system. I used MATLAB and Simulink to
             model the performance of various configurations, and sourced and
             manufactured the mounting fixtures.
-          </p>
+          </Text>
         </div>
       </JobEntry>
+      <Spacer h={0.5} />
       <JobEntry id="entry-2">
         <Image
           alt="Bruin Racing logo"
@@ -56,6 +57,7 @@ export function WorkPanel(): ReactElement {
           </p>
         </div>
       </JobEntry>
+      <Spacer h={0.5} />
       <JobEntry id="entry-3">
         <Image
           alt="UCLA logo"
