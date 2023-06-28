@@ -37,7 +37,7 @@ export function Root(): ReactElement {
           <div className="contact">
             <br />
             Email:{" "}
-            <Link color href="mailto:tarancacacho@gmail.com">
+            <Link color href="mailto:tarancacacho@gmail.com" target="_blank">
               tarancacacho@gmail.com
             </Link>
             <br />
@@ -45,17 +45,22 @@ export function Root(): ReactElement {
             <Link
               color
               href="https://drive.google.com/file/d/14NKrPfpl3MInqTR7ttO-5ajJnkN4O87i/view?usp=sharing"
+              target="_blank"
             >
               View
             </Link>
             <br />
             LinkedIn:{" "}
-            <Link color href="https://linkedin.com/in/tarancacacho">
+            <Link
+              color
+              href="https://linkedin.com/in/tarancacacho"
+              target="_blank"
+            >
               tarancacacho
             </Link>
             <br />
             Github:{" "}
-            <Link color href="https://github.com/Fwep">
+            <Link color href="https://github.com/Fwep" target="_blank">
               Fwep
             </Link>
           </div>

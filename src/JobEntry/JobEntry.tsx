@@ -8,7 +8,7 @@ export function JobEntry({
   children,
 }: PropsWithChildren<Props>): ReactElement {
   return (
-    <Card hoverable type="secondary" className="job-entry" id={id}>
+    <Card hoverable type="secondary" className="job-entry" id={id} width={50}>
       {children}
     </Card>
   );
