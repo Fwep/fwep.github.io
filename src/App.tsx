@@ -2,9 +2,13 @@ import { Root } from "./Root";
 import { PhotoPanel } from "./PhotoPanel";
 import { WorkPanel } from "./WorkPanel";
 
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  createHashRouter,
+  RouterProvider,
+} from "react-router-dom";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <Root />,
