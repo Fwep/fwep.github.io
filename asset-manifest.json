@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/fwep-v2/static/css/main.ef9437d5.css",
+    "main.js": "/fwep-v2/static/js/main.4f15750a.js",
+    "index.html": "/fwep-v2/index.html",
+    "main.ef9437d5.css.map": "/fwep-v2/static/css/main.ef9437d5.css.map",
+    "main.4f15750a.js.map": "/fwep-v2/static/js/main.4f15750a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ef9437d5.css",
+    "static/js/main.4f15750a.js"
+  ]
+}
