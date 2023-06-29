@@ -1,23 +1,22 @@
 import { Nav } from "../Nav";
 import { ReactElement } from "react";
-import { Outlet } from "react-router-dom";
-import { Button, Link, Modal, Page, Spacer, useModal } from "@geist-ui/core";
+import { Outlet, useLocation } from "react-router-dom";
+import { Link, Modal, Spacer, useModal } from "@geist-ui/core";
 import TypeIt from "typeit-react";
 
 export function Root(): ReactElement {
   const { visible, setVisible } = useModal();
+  const { pathname } = useLocation();
   return (
     <div className="page">
-      <div>
-        <Nav />
-      </div>
+      <Nav />
       <Spacer h={0.5} />
       <main className="main">
         <Outlet />
       </main>
       <Spacer h={0.5} />
       <Link
-        className="contact-link"
+        className={`${pathname === "/" ? "hide-contact" : ""}`}
         onClick={(e) => {
           e.preventDefault();
           setVisible(true);

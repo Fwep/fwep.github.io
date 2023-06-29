@@ -1,4 +1,4 @@
-import { Button, Grid, Spacer } from "@geist-ui/core";
+import { Button, Spacer } from "@geist-ui/core";
 import { ReactElement, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import TypeIt from "typeit-react";
@@ -10,7 +10,7 @@ export function Nav(): ReactElement {
   const [subDir, setSubDir] = useState(pathname);
 
   return (
-    <div className="nav">
+    <div className={`nav${pathname !== "/" ? " animate-top" : ""}`}>
       <div className="terminal-input">
         <TypeIt
           options={{

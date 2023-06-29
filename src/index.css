@@ -19,6 +19,24 @@
   }
 }
 
+.hide-contact {
+  opacity: 0;
+}
+
+.nav {
+  position: relative;
+  transform: translateY(40vh);
+  transition: transform 0.25s ease-out;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.animate-top {
+  transform: translateY(0vh);
+}
+
 .placeholder-container {
   position: relative;
   background-size: contain;
@@ -215,13 +233,6 @@ p.raw-job-text:nth-of-type(n) {
 
 .terminal-input {
   display: flex;
-}
-
-.nav {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .footer {
