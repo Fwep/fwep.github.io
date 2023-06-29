@@ -1,6 +1,6 @@
-# taran.me
+# fwep.io
 
-### Commands
+## Commands
 
 ```
 npm start - start the service locally
