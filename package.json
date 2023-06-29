@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "main": "index.tsx",
+  "homepage": "https://fwep.github.io",
   "dependencies": {
     "@geist-ui/core": "^2.3.8",
     "@testing-library/jest-dom": "^5.16.5",
