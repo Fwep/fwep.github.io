@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Photo, RenderPhotoProps } from "react-photo-album";
+import { RenderPhotoProps } from "react-photo-album";
 
 export default function Image({
   photo: { src, height, width },
