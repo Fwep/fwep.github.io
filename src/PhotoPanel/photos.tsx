@@ -78,7 +78,7 @@ const files = [
   },
 ];
 
-const photos = files.map((photo) => {
+const photos = files.map((photo, idx) => {
   const width = breakpoints[0];
   const height = (photo.height / photo.width) * width;
 
@@ -86,7 +86,7 @@ const photos = files.map((photo) => {
     src: photo.src,
     height: width,
     width: height,
-    images: breakpoints.map((breakpoint) => {
+    srcSet: breakpoints.map((breakpoint) => {
       const height = Math.round((photo.height / photo.width) * breakpoint);
       return {
         src: photo.src,
