@@ -24,10 +24,10 @@ export function WorkPanel(): ReactElement {
             <p>less meta.txt</p>
           </Typist>
           <Text className="raw-job-text" id="job-text-1">
-            As part of the Formula SAE racing org, I was in charge of the design
-            of our race car's cooling system. I used MATLAB and Simulink to
-            model the performance of various configurations, and sourced and
-            manufactured the mounting fixtures.
+            At Meta, I worked in Supply Chain Engineering, working on the
+            procurement team. If you needed a good or service to get your job
+            done, the large-scale infra that I optimized and expanded upon
+            enabled that.
           </Text>
         </div>
       </JobEntry>
@@ -47,13 +47,13 @@ export function WorkPanel(): ReactElement {
             className="typist-job-description"
             startDelay={2000}
           >
-            <p>less meta.txt</p>
+            <p>less bruin_racing.txt</p>
           </Typist>
           <p className="raw-job-text" id="job-text-2">
-            As part of the Formula SAE racing org, I was in charge of the design
-            of our race car's cooling system. I used MATLAB and Simulink to
-            model the performance of various configurations, and sourced and
-            manufactured the mounting fixtures.
+            As part of the Formula SAE racing org, I was in charge of making the
+            car cool. <i>Literally.</i> I used MATLAB and Simulink to model the
+            performance of various cooling-system configurations, and sourced
+            and manufactured the mounting fixtures.
           </p>
         </div>
       </JobEntry>
@@ -73,13 +73,12 @@ export function WorkPanel(): ReactElement {
             className="typist-job-description"
             startDelay={3000}
           >
-            <p>less meta.txt</p>
+            <p>less ucla.txt</p>
           </Typist>
           <p className="raw-job-text" id="job-text-3">
-            As part of the Formula SAE racing org, I was in charge of the design
-            of our race car's cooling system. I used MATLAB and Simulink to
-            model the performance of various configurations, and sourced and
-            manufactured the mounting fixtures.
+            B.S. Mechanical Engineering. Physics, statics, materials,
+            thermodynamics, and design were the staples of my curriculum. Go
+            Bruins!
           </p>
         </div>
       </JobEntry>
