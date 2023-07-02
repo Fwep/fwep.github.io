@@ -19,7 +19,7 @@ export default function Image({
   const { style, ...restImageProps } = imageProps;
   return (
     <div
-      className={`placeholder-container${+isLoading ? " no-cursor" : ""}`}
+      className={`placeholder-container${isLoading ? " no-cursor" : ""}`}
       style={style}
     >
       {isLoading && <div className="placeholder-glimmer" />}
@@ -30,7 +30,7 @@ export default function Image({
         onContextMenu={(e) => e.preventDefault()}
         height={height}
         width={width}
-        style={isLoading ? { display: "none" } : style}
+        style={isLoading ? { display: "hidden" } : style}
         {...restImageProps}
       />
     </div>
