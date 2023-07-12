@@ -182,6 +182,10 @@ p.raw-job-text:nth-of-type(n) {
   }
 }
 
+img {
+  margin-bottom: 1em;
+}
+
 #entry-1 {
   animation: blink 0.5s step-end 0s forwards;
 }

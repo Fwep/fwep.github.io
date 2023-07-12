@@ -31,7 +31,6 @@ export default function Image({
         sizes={sizes}
         src={src}
         srcSet={srcSet}
-        // style={isLoading ? { display: "hidden" } : {}}
       />
     </div>
   );
