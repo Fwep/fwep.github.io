@@ -1,80 +1,80 @@
-const breakpoints = [3840, 2400, 1080, 640, 384, 256, 128, 96, 64, 48];
+const breakpoints = [1920, 1600, 1366, 1024, 768, 640];
 
 const files = [
   {
-    src: "https://taran-cacacho-website-photos.s3.us-west-1.amazonaws.com/DJI_0279-HDR-2.jpg",
+    src: "https://taran-cacacho-website-photos.s3.us-west-1.amazonaws.com/hawaii",
     height: 1080,
-    width: 720,
+    width: 1920,
   },
   {
-    src: "https://taran-cacacho-website-photos.s3.us-west-1.amazonaws.com/DSC00090.jpg",
-    height: 720,
-    width: 1080,
+    src: "https://taran-cacacho-website-photos.s3.us-west-1.amazonaws.com/waterfall",
+    height: 2880,
+    width: 1920,
   },
   {
-    src: "https://taran-cacacho-website-photos.s3.us-west-1.amazonaws.com/DSC04200.jpg",
-    height: 720,
-    width: 1080,
+    src: "https://taran-cacacho-website-photos.s3.us-west-1.amazonaws.com/loki_and_luna",
+    height: 2880,
+    width: 1920,
   },
   {
-    src: "https://taran-cacacho-website-photos.s3.us-west-1.amazonaws.com/DSC05259.jpg",
-    height: 720,
-    width: 1080,
+    src: "https://taran-cacacho-website-photos.s3.us-west-1.amazonaws.com/mclaren",
+    height: 2880,
+    width: 1920,
   },
   {
-    src: "https://taran-cacacho-website-photos.s3.us-west-1.amazonaws.com/DSC05426.jpg",
-    height: 720,
-    width: 1080,
+    src: "https://taran-cacacho-website-photos.s3.us-west-1.amazonaws.com/family",
+    height: 2880,
+    width: 1920,
   },
   {
-    src: "https://taran-cacacho-website-photos.s3.us-west-1.amazonaws.com/DSC05503.jpg",
+    src: "https://taran-cacacho-website-photos.s3.us-west-1.amazonaws.com/tools",
     height: 1080,
-    width: 720,
+    width: 1920,
   },
   {
-    src: "https://taran-cacacho-website-photos.s3.us-west-1.amazonaws.com/DSC05658.jpg",
-    height: 720,
-    width: 1080,
+    src: "https://taran-cacacho-website-photos.s3.us-west-1.amazonaws.com/tree_clouds",
+    height: 2880,
+    width: 1920,
   },
   {
-    src: "https://taran-cacacho-website-photos.s3.us-west-1.amazonaws.com/DSC08373-Edit.jpg",
+    src: "https://taran-cacacho-website-photos.s3.us-west-1.amazonaws.com/yosemite",
     height: 1080,
-    width: 720,
+    width: 1920,
   },
   {
-    src: "https://taran-cacacho-website-photos.s3.us-west-1.amazonaws.com/DSC08746.jpg",
-    height: 720,
-    width: 1080,
+    src: "https://taran-cacacho-website-photos.s3.us-west-1.amazonaws.com/fog_tree",
+    height: 2880,
+    width: 1920,
   },
   {
-    src: "https://taran-cacacho-website-photos.s3.us-west-1.amazonaws.com/DSC09010-HDR.jpg",
-    height: 720,
-    width: 1080,
+    src: "https://taran-cacacho-website-photos.s3.us-west-1.amazonaws.com/mosque",
+    height: 2880,
+    width: 1920,
   },
   {
-    src: "https://taran-cacacho-website-photos.s3.us-west-1.amazonaws.com/DSC09391.jpg",
-    height: 720,
-    width: 1080,
+    src: "https://taran-cacacho-website-photos.s3.us-west-1.amazonaws.com/tim",
+    height: 2880,
+    width: 1920,
   },
   {
-    src: "https://taran-cacacho-website-photos.s3.us-west-1.amazonaws.com/DSC09679.jpg",
+    src: "https://taran-cacacho-website-photos.s3.us-west-1.amazonaws.com/dubai",
     height: 1080,
-    width: 720,
+    width: 1920,
   },
   {
-    src: "https://taran-cacacho-website-photos.s3.us-west-1.amazonaws.com/DSC09964.jpg",
+    src: "https://taran-cacacho-website-photos.s3.us-west-1.amazonaws.com/thornton",
     height: 1080,
-    width: 720,
+    width: 1920,
   },
   {
-    src: "https://taran-cacacho-website-photos.s3.us-west-1.amazonaws.com/File528.jpg",
+    src: "https://taran-cacacho-website-photos.s3.us-west-1.amazonaws.com/moon",
     height: 1080,
-    width: 720,
+    width: 1920,
   },
   {
-    src: "https://taran-cacacho-website-photos.s3.us-west-1.amazonaws.com/StarStaX_DSC09669-DSC09252_gap_filling.jpg",
+    src: "https://taran-cacacho-website-photos.s3.us-west-1.amazonaws.com/abu_dhabi",
     height: 1080,
-    width: 720,
+    width: 1920,
   },
 ];
 
@@ -83,13 +83,15 @@ const photos = files.map((photo, idx) => {
   const height = (photo.height / photo.width) * width;
 
   return {
-    src: photo.src,
-    height: width,
-    width: height,
+    src: photo.src + `_${photo.width}.JPG`,
+    height: height,
+    width: width,
+    sizes:
+      "(max-width: 320px) 100vw, (min-width: 768px) 90vw, (min-width: 1024px) 80vw, 100vw",
     srcSet: breakpoints.map((breakpoint) => {
-      const height = Math.round((photo.height / photo.width) * breakpoint);
+      const src = photo.src + `_${breakpoint}.JPG`;
       return {
-        src: photo.src,
+        src: src,
         width: breakpoint,
         height,
       };

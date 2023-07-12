@@ -1,37 +1,38 @@
 import { useState } from "react";
-import { RenderPhotoProps } from "react-photo-album";
 
-export default function Image({
-  photo: { src, height, width },
-  renderDefaultPhoto,
-  imageProps,
-}: RenderPhotoProps<{
+type Props = {
   src: string;
   height: number;
   width: number;
-  srcSet: {
-    src: string;
-    width: number;
-    height: number;
-  }[];
-}>): any {
+  sizes: string;
+  srcSet: string;
+  onClick: () => void;
+};
+
+export default function Image({
+  src,
+  height,
+  width,
+  sizes,
+  srcSet,
+  onClick,
+}: Props): any {
   const [isLoading, setIsLoading] = useState(true);
-  const { style, ...restImageProps } = imageProps;
+  console.log(`for ${src}, height:${height}, width:${width}`);
   return (
-    <div
-      className={`placeholder-container${isLoading ? " no-cursor" : ""}`}
-      style={style}
-    >
+    <div className={`placeholder-container${isLoading ? " no-cursor" : ""}`}>
       {isLoading && <div className="placeholder-glimmer" />}
       <img
+        alt=""
         draggable={false}
         onError={() => setIsLoading(false)}
         onLoad={() => setIsLoading(false)}
         onContextMenu={(e) => e.preventDefault()}
-        height={height}
-        width={width}
-        style={isLoading ? { display: "hidden" } : style}
-        {...restImageProps}
+        onClick={onClick}
+        sizes={sizes}
+        src={src}
+        srcSet={srcSet}
+        // style={isLoading ? { display: "hidden" } : {}}
       />
     </div>
   );
