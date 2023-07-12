@@ -18,7 +18,6 @@ export default function Image({
   onClick,
 }: Props): any {
   const [isLoading, setIsLoading] = useState(true);
-  console.log(`for ${src}, height:${height}, width:${width}`);
   return (
     <div className={`placeholder-container${isLoading ? " no-cursor" : ""}`}>
       {isLoading && <div className="placeholder-glimmer" />}
