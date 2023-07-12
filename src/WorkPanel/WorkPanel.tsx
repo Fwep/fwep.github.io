@@ -52,8 +52,8 @@ export function WorkPanel(): ReactElement {
           <p className="raw-job-text" id="job-text-2">
             As part of the Formula SAE racing org, I was in charge of making the
             car cool. <i>Literally.</i> I used MATLAB and Simulink to model the
-            performance of various cooling-system configurations, and sourced
-            and manufactured the mounting fixtures.
+            performance of various cooling-system configurations, and I
+            manufactured the mounting fixtures.
           </p>
         </div>
       </JobEntry>

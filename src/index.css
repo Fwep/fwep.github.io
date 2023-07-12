@@ -142,6 +142,9 @@ p.raw-job-text:nth-of-type(n) {
   width: 100%;
   margin-left: 10%;
   margin-right: 10%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .work-panel {
@@ -174,7 +177,7 @@ p.raw-job-text:nth-of-type(n) {
 }
 @media (max-width: 620px) {
   .job-entry {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     max-width: calc(100vw - 20%);
   }
 }
