@@ -23,6 +23,7 @@ export default function Image({
       {isLoading && <div className="placeholder-glimmer" />}
       <img
         alt=""
+        className="album"
         draggable={false}
         onError={() => setIsLoading(false)}
         onLoad={() => setIsLoading(false)}
