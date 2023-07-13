@@ -86,8 +86,7 @@ const photos = files.map((photo, idx) => {
     src: photo.src + `_${photo.width}.JPG`,
     height: height,
     width: width,
-    sizes:
-      "(min-width: 320px) 100vw, (min-width: 768px) 90vw, (min-width: 1024px) 80vw, 90vw",
+    sizes: "(max-width: 768px) 100vw, 80vw",
     srcSet: breakpoints.map((breakpoint) => {
       const src = photo.src + `_${breakpoint}.JPG`;
       return {
